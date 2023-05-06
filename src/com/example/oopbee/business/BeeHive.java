@@ -26,9 +26,6 @@ public class BeeHive {
         this.listBee.add(new Drone());
 
 
-        int rValue = this.rand.nextInt();
-        //Random rand = new Random();
-
         for (int i = 0 ; i < 7 ; i++) {
             int r = rand.nextInt(3) + 1;
             if (r == 1) {
