@@ -13,6 +13,8 @@ import java.util.Random;
  */
 public class BeeHive {
     private ArrayList<Bee> listBee;
+    // Random from 1 -> 3
+    private Random rand = SecureRandom.getInstanceStrong();
 
     public void init() {
         //create list of 10 bees  of Queen, Drone and Worker types
@@ -24,8 +26,8 @@ public class BeeHive {
         this.listBee.add(new Drone());
 
 
-        // Random from 1 -> 3
-        Random rand = new Random();
+        int rValue = this.rand.nextInt();
+        //Random rand = new Random();
 
         for (int i = 0 ; i < 7 ; i++) {
             int r = rand.nextInt(3) + 1;
